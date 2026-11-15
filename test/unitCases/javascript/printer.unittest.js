@@ -1767,8 +1767,8 @@ describe("one-pass minify, family W round 8", () => {
 	it("should print the expressions opening an arrow body before its `return` chain as one sequence", () => {
 		const source = fixture("javascript", "one-pass-w5-2");
 		const { code } = minifyOnePass(source, { compress: {}, mangle: false });
-		// A statement opening with `{` keeps the braces.
-		expect(code).toBe("const log=value=>console.log(\"log\",value),sequence=value=>(log(value),value?1:2),several=value=>(log(value),log(value>1?value:-value),value?1:value===0?0:2),ambiguous=value=>{({}).a=value;return value?1:2};console.log(sequence(1),sequence(0),several(2),several(0),ambiguous(1));");
+		// Setting a property of a fresh object runs only its value, here nothing.
+		expect(code).toBe("const log=value=>console.log(\"log\",value),sequence=value=>(log(value),value?1:2),several=value=>(log(value),log(value>1?value:-value),value?1:value===0?0:2),ambiguous=value=>value?1:2;console.log(sequence(1),sequence(0),several(2),several(0),ambiguous(1));");
 		expect(runProgram(code)).toBe(runProgram(source));
 	});
 

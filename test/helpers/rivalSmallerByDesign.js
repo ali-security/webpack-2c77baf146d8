@@ -79,8 +79,6 @@ const BY_DESIGN = [
 			"terser compress: conditionals/issue_1645_1",
 			"terser compress: dead-code/dead_code_2_should_warn",
 			"terser compress: dead-code/dead_code_2_should_warn_strict",
-			"terser compress: drop-unused/issue_1715_1",
-			"terser compress: drop-unused/issue_1715_2",
 			"terser compress: drop-unused/issue_1715_4",
 			"terser compress: drop-unused/issue_1968",
 			"terser compress: drop-unused/issue_2136_1",

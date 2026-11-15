@@ -861,7 +861,6 @@ const SWC_SMALLER_BY_REASON = [
 			"swc minifier: fixture/issues/12204/empty-controls/input.js",
 			"swc minifier: fixture/issues/12204/nullish-arguments/input.js",
 			"swc minifier: fixture/issues/12212/safe-unused-rest/input.js",
-			"swc minifier: fixture/issues/5343/input.js",
 			"swc minifier: fixture/issues/9741_global_objects/input.js",
 			"swc minifier: fixture/projects/jquery/5/input.js"
 		]

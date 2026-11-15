@@ -1,6 +1,6 @@
 "use strict";
 
-// cspell:ignore argname argnames autowhatever chartjs concattenating constdef cryptojs defun destructurings dont elad expname fargs feeback firestore fnames funs hoofd instancesearch joda lvalues mangleprop mangleprops noinline nonmatching outstatic plotly propmangle redef
+// cspell:ignore argname argnames autowhatever chartjs concattenating constdef cryptojs defun dont elad expname fargs feeback firestore fnames funs hoofd instancesearch joda lvalues mangleprop mangleprops noinline nonmatching outstatic plotly propmangle
 
 // What oxc's minifier does that webpack's does not yet, each with the sources
 // whose output under the default minimizer's options is bigger than oxc's.
@@ -252,8 +252,6 @@ const OXC_SMALLER_BY_REASON = [
 			"oxc minifier: peephole/remove_unused_expression.rs:840",
 			"oxc minifier: peephole/remove_unused_expression.rs:872",
 			"oxc minifier: peephole/remove_unused_expression.rs:873",
-			"oxc minifier: peephole/remove_unused_expression.rs:1116",
-			"oxc minifier: peephole/remove_unused_expression.rs:1120",
 			"oxc minifier: peephole/remove_unused_expression.rs:1313"
 		]
 	],
@@ -272,7 +270,6 @@ const OXC_SMALLER_BY_REASON = [
 			"oxc minifier: peephole/substitute_alternate_syntax.rs:169",
 			"oxc minifier: peephole/substitute_alternate_syntax.rs:170",
 			"oxc minifier: peephole/substitute_alternate_syntax.rs:668",
-			"oxc minifier: peephole/substitute_alternate_syntax.rs:903",
 			"oxc minifier: peephole/substitute_alternate_syntax.rs:914",
 			"oxc minifier: peephole/substitute_alternate_syntax.rs:1065",
 			"oxc minifier: peephole/substitute_alternate_syntax.rs:1081",
@@ -375,8 +372,6 @@ const OXC_SMALLER_BY_REASON = [
 			"swc exec: terser_functions_issue_3016_2",
 			"swc exec: terser_functions_issue_2783",
 			"swc exec: terser_try_catch_catch_destructuring_with_sequence",
-			"swc exec: try_catch_2",
-			"swc exec: try_catch_5",
 			"swc exec: issue_6903_1",
 			"swc exec: issue_6903_2",
 			"swc exec: issue_6903_3",
@@ -448,7 +443,6 @@ const OXC_SMALLER_BY_REASON = [
 			"oxc minifier: peephole/dead_code_elimination.rs:843",
 			"oxc minifier: peephole/dead_code_elimination.rs:867",
 			"oxc minifier: peephole/dead_code_elimination.rs:908",
-			"oxc minifier: peephole/dead_code_elimination.rs:955",
 			"oxc minifier: peephole/dead_code_elimination.rs:1068",
 			"oxc minifier: peephole/dead_code_elimination.rs:560",
 			"oxc minifier: peephole/dead_code_elimination.rs:561"
@@ -683,7 +677,6 @@ const OXC_SMALLER_BY_REASON = [
 			"oxc minifier: peephole/inline.rs:718",
 			"oxc minifier: peephole/inline.rs:654",
 			"oxc minifier: peephole/inline.rs:18",
-			"oxc minifier: peephole/inline.rs:171",
 			"oxc minifier: peephole/inline.rs:177",
 			"oxc minifier: peephole/inline.rs:353",
 			"oxc minifier: peephole/inline.rs:384",
@@ -864,7 +857,6 @@ const OXC_SMALLER_BY_REASON = [
 			"terser compress: dead-code/dead_code_const_declaration",
 			"terser compress: dead-code/dead_code_const_annotation_regex",
 			"terser compress: dead-code/dead_code_const_annotation_complex_scope",
-			"terser compress: dead-code/try_catch_finally",
 			"terser compress: dead-code/return_assignment",
 			"terser compress: dead-code/issue_2749"
 		]
@@ -872,15 +864,6 @@ const OXC_SMALLER_BY_REASON = [
 	[
 		"oxc reads a global twice as one value, as in `a ? b : a` to `a && b` or `a === null || a === void 0` to `a == null`, where webpack takes a global for a getter that may answer each read anew",
 		["oxc minifier: peephole/minimize_conditional_expression.rs:90"]
-	],
-	[
-		"oxc goes further than webpack on what terser's `rename` tests cover",
-		[
-			"terser compress: rename/mangle_catch_redef_1",
-			"terser compress: rename/mangle_catch_redef_1_ie8",
-			"terser compress: rename/mangle_catch_redef_1_toplevel",
-			"terser compress: rename/mangle_catch_redef_1_ie8_toplevel"
-		]
 	],
 	[
 		"oxc goes further than webpack on what oxc's `ecmascript/value_type.rs` tests cover",
@@ -906,15 +889,6 @@ const OXC_SMALLER_BY_REASON = [
 			"swc minifier: fixture/issues/11684/preserved/input.js",
 			"swc minifier: fixture/issues/12223/nested-function-control/input.js",
 			"swc minifier: full/size/991835278eecab695ad3515447b5747adcdfe1b4/input.js"
-		]
-	],
-	[
-		"oxc goes further than webpack on what terser's `issue-1704` tests cover",
-		[
-			"terser compress: issue-1704/mangle_catch_redef_1",
-			"terser compress: issue-1704/mangle_catch_redef_1_ie8",
-			"terser compress: issue-1704/mangle_catch_redef_1_toplevel",
-			"terser compress: issue-1704/mangle_catch_redef_1_ie8_toplevel"
 		]
 	],
 	[
@@ -1078,10 +1052,7 @@ const OXC_SMALLER_BY_REASON = [
 	],
 	[
 		"oxc goes further than webpack on what terser's `yield` tests cover",
-		[
-			"terser compress: yield/generators_yield_assign",
-			"terser compress: yield/yield_statements"
-		]
+		["terser compress: yield/yield_statements"]
 	],
 	[
 		"boolean and conditional forms: `!a&&b` vs `a?!1:b`, `!!a` vs `a&&!0`, `x||void 0` vs `if(x)`, an `if` with or without braces, a test's branches swapped",
@@ -1107,7 +1078,6 @@ const OXC_SMALLER_BY_REASON = [
 	[
 		"oxc drops what nothing reads or what has no effect: unused variables, functions, parameters and pure expressions",
 		[
-			"terser compress: drop-unused/issue_1715_3",
 			"terser compress: reduce_vars/issue_t1382",
 			"terser compress: typescript/typescript_disabled_interface",
 			"swc minifier: fixture/issues/11730_class_expr/input.js",
@@ -1183,8 +1153,7 @@ const OXC_SMALLER_BY_REASON = [
 		"oxc goes further than webpack on what swc's `fixture/pr` tests cover",
 		[
 			"swc minifier: fixture/pr/11814_class_effect_guards/input.js",
-			"swc minifier: fixture/pr/11987/input.js",
-			"swc minifier: fixture/pr/7856/1/input.js"
+			"swc minifier: fixture/pr/11987/input.js"
 		]
 	],
 	[
@@ -1350,10 +1319,6 @@ const OXC_SMALLER_BY_REASON = [
 	[
 		"oxc goes further than webpack on what terser's `expression` tests cover",
 		["terser compress: expression/pow_with_number_constants"]
-	],
-	[
-		"oxc goes further than webpack on what terser's `hoist` tests cover",
-		["terser compress: hoist/hoist_no_destructurings"]
 	],
 	[
 		"oxc goes further than webpack on what terser's `issue-1006` tests cover",
