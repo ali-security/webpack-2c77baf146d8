@@ -500,7 +500,6 @@ const OXC_SMALLER_BY_REASON = [
 			"swc minifier: fixture/projects/next/extra/if_return/.4/input.js",
 			"terser compress: inline/inline_into_scope_conflict_enclosed",
 			"terser compress: yield/yield_before_punctuators",
-			"swc minifier: fixture/issues/8737/input.js",
 			"swc minifier: fixture/issues/9756/input.js"
 		]
 	],
@@ -1124,14 +1123,6 @@ const OXC_SMALLER_BY_REASON = [
 	[
 		"oxc goes further than webpack on what terser's `issue-1639` tests cover",
 		["terser compress: issue-1639/issue_1639_1"]
-	],
-	[
-		"oxc goes further than webpack on what terser's `issue-t50` tests cover",
-		[
-			"terser compress: issue-t50/issue_t50",
-			"terser compress: issue-t50/issue_t50_let",
-			"terser compress: issue-t50/issue_t50_const"
-		]
 	],
 	[
 		"oxc goes further than webpack on what terser's `labels` tests cover",

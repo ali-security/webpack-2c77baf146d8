@@ -326,7 +326,6 @@ const SWC_SMALLER_BY_REASON = [
 			"terser compress: sequences/lift_sequences_2",
 			"terser compress: sequences/lift_sequences_5",
 			"terser compress: sequences/lift_sequences_6",
-			"swc minifier: fixture/issues/10630/input.js",
 			"swc minifier: fixture/issues/10807/input.js",
 			"swc minifier: fixture/issues/12190/input.js",
 			"swc minifier: fixture/issues/12380/input.js",
@@ -681,9 +680,7 @@ const SWC_SMALLER_BY_REASON = [
 			"swc minifier: fixture/issues/10721/input.js",
 			"swc minifier: fixture/issues/12208/non-optional-continuation/input.js",
 			"swc minifier: fixture/issues/12215/input.js",
-			"swc minifier: fixture/issues/8737/2/input.js",
 			"swc minifier: fixture/issues/8737/input.js",
-			"swc minifier: fixture/issues/9030/input.js",
 			"swc minifier: fixture/projects/wmr/archive-1/chunks/index.bf24abaa/input.js"
 		]
 	],
@@ -798,14 +795,6 @@ const SWC_SMALLER_BY_REASON = [
 	[
 		"swc goes further than webpack on what terser's `arrays` tests cover",
 		["terser compress: arrays/length"]
-	],
-	[
-		"swc goes further than webpack on what terser's `issue-t50` tests cover",
-		[
-			"terser compress: issue-t50/issue_t50",
-			"terser compress: issue-t50/issue_t50_let",
-			"terser compress: issue-t50/issue_t50_const"
-		]
 	],
 	[
 		"swc goes further than webpack on what terser's `transform` tests cover",

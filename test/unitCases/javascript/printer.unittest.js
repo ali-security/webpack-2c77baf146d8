@@ -1339,7 +1339,7 @@ describe("one-pass minify of reads and calls on literals", () => {
 		const constant =
 			fixture("javascript", "one-pass-minify-of-reads-and-calls-on-literals-should-fold-a-value-read-only-by-3");
 		const constantCode = minifyOnePass(constant, { compress: {}, mangle: false, ecma: 2020 }).code;
-		expect(constantCode).toBe("function i(){return`a`.y}function j(){return{p:-1}.p?.y}function q(){return(-1)?.y}function r(){return`1`.y}");
+		expect(constantCode).toBe("function i(){return`a`.y}function j(){return(-1)?.y}function q(){return(-1)?.y}function r(){return`1`.y}");
 		const program = fixture("javascript", "one-pass-minify-of-reads-and-calls-on-literals-should-fold-a-value-read-only-by-4");
 		const code = minifyOnePass(program, { compress: {}, mangle: false, ecma: 2020 }).code;
 		// What an engine without `?.` cannot parse runs only where it can.
