@@ -250,8 +250,7 @@ const OXC_SMALLER_BY_REASON = [
 			"oxc minifier: peephole/remove_unused_expression.rs:792",
 			"oxc minifier: peephole/remove_unused_expression.rs:840",
 			"oxc minifier: peephole/remove_unused_expression.rs:872",
-			"oxc minifier: peephole/remove_unused_expression.rs:873",
-			"oxc minifier: peephole/remove_unused_expression.rs:1313"
+			"oxc minifier: peephole/remove_unused_expression.rs:873"
 		]
 	],
 	[
@@ -334,9 +333,7 @@ const OXC_SMALLER_BY_REASON = [
 			"oxc minifier: peephole/minimize_conditions.rs:1018",
 			"oxc minifier: peephole/minimize_conditions.rs:1019",
 			"oxc minifier: peephole/minimize_conditions.rs:1020",
-			"oxc minifier: peephole/minimize_conditions.rs:1224",
-			"oxc minifier: peephole/minimize_conditions.rs:1243",
-			"oxc minifier: peephole/minimize_conditions.rs:1252"
+			"oxc minifier: peephole/minimize_conditions.rs:1224"
 		]
 	],
 	[
