@@ -431,7 +431,6 @@ const SWC_SMALLER_BY_REASON = [
 			"terser compress: functions/issue_1841_1",
 			"terser compress: functions/function_returning_constant_literal",
 			"terser compress: functions/issue_2097",
-			"terser compress: functions/inline_loop_2",
 			"terser compress: functions/issue_2604_2",
 			"terser compress: functions/issue_2630_1",
 			"terser compress: functions/recursive_inline_2",

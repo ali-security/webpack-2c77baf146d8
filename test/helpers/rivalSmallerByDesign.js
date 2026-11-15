@@ -114,8 +114,6 @@ const BY_DESIGN = [
 			"terser compress: reduce_vars/perf_1",
 			"terser compress: reduce_vars/perf_5",
 			"terser compress: reduce_vars/recursive_inlining_3",
-			"terser compress: reduce_vars/toplevel_on_loops_1",
-			"terser compress: reduce_vars/toplevel_on_loops_2",
 			"terser compress: reduce_vars/unsafe_evaluate_object_1",
 			"terser compress: reduce_vars/var_assign_2",
 			"terser compress: reduce_vars/var_assign_3",
