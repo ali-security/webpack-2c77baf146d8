@@ -168,7 +168,6 @@ const OXC_SMALLER_BY_REASON = [
 			"terser compress: drop-unused/issue_1838",
 			"terser compress: evaluate/unsafe_constant",
 			"terser compress: export/name_cache_do_not_mangle_export_let_name",
-			"terser compress: issue-1413/issue_1413_top_retain_reference_shorter_than_value_2",
 			"terser compress: issue-1656/f7",
 			"terser compress: loops/keep_collapse_const_in_own_block_scope_2",
 			"terser compress: properties/join_object_assignments_NaN_1",

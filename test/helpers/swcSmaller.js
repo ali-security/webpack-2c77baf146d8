@@ -370,7 +370,6 @@ const SWC_SMALLER_BY_REASON = [
 	[
 		"swc goes further than webpack on what terser's `collapse_vars` tests cover",
 		[
-			"terser compress: collapse_vars/collapse_vars_issue_721",
 			"terser compress: collapse_vars/collapse_vars_seq",
 			"terser compress: collapse_vars/collapse_vars_throw",
 			"terser compress: collapse_vars/collapse_vars_assignment",
