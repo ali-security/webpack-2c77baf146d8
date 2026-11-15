@@ -78,3 +78,38 @@ function read(value) {
 	})(value);
 }
 console.log(effect(1), read(1), log.join());
+// Read nowhere, or running nothing, it prints bare or as `void 0`.
+var sequence = ((function () {
+	log.push("sequence");
+})(), log.length);
+console.log(sequence, log.join());
+function unreadDeclarator() {
+	var unread = (function () {
+		log.push("declarator");
+	})();
+	return log.join();
+}
+function unreadAssignment() {
+	var unread;
+	return (
+		(unread = (function () {
+			log.push("assignment");
+		})()),
+		log.join()
+	);
+}
+console.log(unreadDeclarator(), unreadAssignment());
+var nothing = (function () {
+	0;
+})();
+var bracket = (function () {
+	[log].pop().push("bracket");
+})();
+console.log(nothing, bracket, log.join());
+// A pattern defaulting to a literal keeps the call.
+function pattern(value) {
+	return (function (a, { b } = 1) {
+		return a;
+	})(value);
+}
+console.log(pattern("pattern"));

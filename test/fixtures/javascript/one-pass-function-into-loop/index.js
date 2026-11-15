@@ -69,3 +69,36 @@ function opensObject() {
 	({ key: object.key } = { key: k });
 }
 console.log("object", object.key);
+// A statement opening as `this`, a literal, an operator, `new`, an array
+// or a template moves as well.
+var opened = [];
+(function () {
+	var push = () => {
+		this.push("this");
+	};
+	for (var i = 0; i < 2; i++) push();
+}).call(opened);
+for (var l = 0; l < 2; l++) literal();
+function literal() {
+	"literal".concat(opened.push(l));
+}
+for (var m = 0; m < 2; m++) unary();
+function unary() {
+	void opened.push("unary");
+}
+function Made() {
+	opened.push("new");
+}
+for (var n = 0; n < 2; n++) made();
+function made() {
+	new Made().constructor;
+}
+for (var o = 0; o < 2; o++) array();
+function array() {
+	[o].forEach(opened.push, opened);
+}
+for (var p = 0; p < 2; p++) template();
+function template() {
+	`${p}`.concat(opened.push("template"));
+}
+console.log(opened.join());

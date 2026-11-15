@@ -89,3 +89,45 @@ console.log(
 	}
 })();
 console.log(log.join(), counter.count);
+// A class expression's keys run strict: out of strict code, a key writing or
+// making a function keeps the class, and one reading or calling prints bare.
+try {
+	(class {
+		[undeclaredKey = 1]() {}
+	});
+} catch (error) {
+	log.push(error.name);
+}
+var frozen = Object.freeze({ p: 1 });
+try {
+	(class {
+		[frozen.p++]() {}
+	});
+} catch (error) {
+	log.push(error.name);
+}
+(class {
+	[log.push(typeof undeclaredKey, frozen.p)]() {}
+});
+console.log(log.join());
+try {
+	(class {
+		[delete frozen.p]() {}
+	});
+} catch (error) {
+	log.push(error.name);
+}
+// A static field's name read prints after the keys.
+(function () {
+	"use strict";
+	try {
+		class Both {
+			[counter.count++]() {}
+			static value = later;
+		}
+	} catch (error) {
+		log.push(error.name);
+	}
+	let later = 1;
+})();
+console.log(log.join(), counter.count);

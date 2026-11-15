@@ -118,3 +118,20 @@ console.log(
 		return log.join();
 	})()
 );
+// A spread may run a getter: the literal and its write stay.
+console.log(
+	(function () {
+		var log = [];
+		({ ...log, a: 1 }).b = log.push("spread");
+		return log.join();
+	})()
+);
+// A comment on the folded literal keeps the write.
+console.log(
+	(function () {
+		var log = [];
+		var fresh = /*! kept */ {};
+		fresh.c = log.push("comment");
+		return log.join();
+	})()
+);
