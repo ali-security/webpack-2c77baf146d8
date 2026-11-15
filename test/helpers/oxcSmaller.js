@@ -923,15 +923,6 @@ const OXC_SMALLER_BY_REASON = [
 		]
 	],
 	[
-		"oxc's output is wrong: it folds a string method otherwise than the spec, as its own tests now show: `slice` and `substring` keep a surrogate pair they split, an `undefined` end reads as 0, `indexOf` wraps a position past 2**32, and `trim` keeps U+FEFF and drops U+0085",
-		[
-			"oxc minifier: peephole/replace_known_methods.rs:462",
-			"oxc minifier: peephole/replace_known_methods.rs:463",
-			"oxc minifier: peephole/replace_known_methods.rs:464",
-			"oxc minifier: peephole/replace_known_methods.rs:465"
-		]
-	],
-	[
 		"oxc goes further than webpack on what terser's `harmony` tests cover",
 		["terser compress: harmony/class_extends"]
 	],

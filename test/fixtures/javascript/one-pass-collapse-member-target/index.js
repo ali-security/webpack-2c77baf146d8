@@ -54,3 +54,43 @@ console.log(
 // A top-level `const` read as long as its value prints the value.
 const a = 1;
 console.log(a, log.join(""));
+// A function moved to its one call, read off where a member of it is set,
+// takes the parentheses the same call written in place takes.
+function setInnermost(chain, value, plain) {
+	return () => {
+		if (plain) {
+			chain.value = value;
+		} else {
+			const innermost = innermostOf(chain);
+			innermost.value = value;
+		}
+	};
+}
+function innermostOf(node) {
+	while (node.next) node = node.next;
+	return node;
+}
+var chain = { next: { next: {} } };
+setInnermost(chain, 3, false)();
+console.log(chain.next.next.value);
+// Read rather than set, or used as a key, the same call takes no parentheses.
+function readInnermost(chain) {
+	const innermost = firstOf(chain);
+	return innermost.value;
+}
+function firstOf(node) {
+	while (node.next) node = node.next;
+	return node;
+}
+function keyed(table, chain) {
+	const key = keyOf(chain);
+	return table[key];
+}
+function keyOf(node) {
+	while (node.next) node = node.next;
+	return node.name;
+}
+console.log(
+	readInnermost(chain),
+	keyed({ last: 4 }, { next: { name: "last" } })
+);
