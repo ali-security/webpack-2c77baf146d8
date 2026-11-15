@@ -432,7 +432,6 @@ const OXC_SMALLER_BY_REASON = [
 			"oxc minifier: peephole/dead_code_elimination.rs:153",
 			"oxc minifier: peephole/dead_code_elimination.rs:158",
 			"oxc minifier: peephole/dead_code_elimination.rs:438",
-			"oxc minifier: peephole/dead_code_elimination.rs:804",
 			"oxc minifier: peephole/dead_code_elimination.rs:841",
 			"oxc minifier: peephole/dead_code_elimination.rs:842",
 			"oxc minifier: peephole/dead_code_elimination.rs:843",
@@ -697,8 +696,6 @@ const OXC_SMALLER_BY_REASON = [
 			"oxc minifier: peephole/inline_single_use_variable.rs:282",
 			"oxc minifier: peephole/inline_single_use_variable.rs:226",
 			"oxc minifier: peephole/inline_single_use_variable.rs:277",
-			"oxc minifier: peephole/inline_single_use_variable.rs:286",
-			"oxc minifier: peephole/inline_single_use_variable.rs:290",
 			"oxc minifier: peephole/inline_single_use_variable.rs:466",
 			"oxc minifier: peephole/inline_single_use_variable.rs:475",
 			"oxc minifier: peephole/inline_single_use_variable.rs:557"

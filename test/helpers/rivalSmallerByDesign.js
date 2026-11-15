@@ -58,7 +58,6 @@ const BY_DESIGN = [
 			"oxc minifier: peephole/obscure_edge_cases.rs:457",
 			"oxc minifier: peephole/remove_dead_code.rs:35",
 			"swc minifier: fixture/projects/jquery/5/input.js",
-			"swc minifier: fixture/issues/12222/input.js",
 			"swc minifier: fixture/issues/do-while-false-terminal-jump/completion/guard-after-expression/input.js",
 			"swc minifier: fixture/issues/do-while-false-terminal-jump/guarded-jump/input.js",
 			"swc minifier: fixture/issues/string-from-char-code-uint16/input.js"
@@ -68,8 +67,6 @@ const BY_DESIGN = [
 		"SWC_SMALLER",
 		"swc runs a transform the case's own options leave off (`evaluate`, `side_effects`, `unused`, `inline` levels, `keep_fargs`, `if_return`, the target `ecma`, or any when the case sets none), so the gap is the options, not a missing transform",
 		[
-			"swc minifier: fixture/issues/11512-exhaustive/iife-anon-arg-unused/input.js",
-			"swc minifier: fixture/issues/11512-exhaustive/iife-anon-default-unused/input.js",
 			"swc minifier: fixture/issues/12227/input.js",
 			"swc minifier: fixture/issues/2262/1/input.js",
 			"terser compress: arrow/call_args_drop_param",

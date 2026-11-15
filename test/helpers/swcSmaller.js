@@ -642,9 +642,7 @@ const SWC_SMALLER_BY_REASON = [
 		"swc goes further than webpack on what terser's `issue-281` tests cover",
 		[
 			"terser compress: issue-281/safe_undefined",
-			"terser compress: issue-281/issue_1254_negate_iife_nested",
-			"terser compress: issue-281/issue_1288_side_effects",
-			"terser compress: issue-281/wrap_iife_in_return_call"
+			"terser compress: issue-281/issue_1288_side_effects"
 		]
 	],
 	[
