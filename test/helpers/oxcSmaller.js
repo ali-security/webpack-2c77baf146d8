@@ -11,7 +11,6 @@ const OXC_SMALLER_BY_REASON = [
 	[
 		"oxc evaluates built-in calls and reads on literals at build time",
 		[
-			"oxc minifier: peephole/replace_known_methods.rs:49",
 			"oxc minifier: peephole/replace_known_methods.rs:204",
 			"oxc minifier: peephole/replace_known_methods.rs:205",
 			"oxc minifier: peephole/replace_known_methods.rs:206",
