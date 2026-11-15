@@ -102,3 +102,12 @@ function template() {
 	`${p}`.concat(opened.push("template"));
 }
 console.log(opened.join());
+// A function reading its own name stays one function, not one per turn.
+var selves = [];
+(function () {
+	const keep = function self() {
+		selves.push(self);
+	};
+	for (let i = 0; i < 2; i++) keep();
+})();
+console.log(selves.length, selves[0] === selves[1]);
